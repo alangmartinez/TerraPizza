@@ -45,8 +45,8 @@ export default function index() {
           templateRows="repeat(4, 1fr)"
           gap={8}
         >
-          {pizzas.map((pizza, i) => {
-            <GridItem key={i} colStart={1 + i} colEnd={2 + i}>
+          {pizzas.map((pizza, index) => {
+            <GridItem key={index} colStart={1 + index} colEnd={2 + index}>
               <Card {...pizza} />
             </GridItem>;
           })}

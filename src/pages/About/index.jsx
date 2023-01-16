@@ -15,7 +15,7 @@ import pizza from "../../assets/images/favicon.png";
 export default function index() {
   return (
     <Stack
-      direction={{ base: "column", lg: "row" }}
+      direction={{ base: "column", xl: "row" }}
       as="section"
       id="about"
       align={{ base: "center", lg: "center" }}
@@ -24,15 +24,15 @@ export default function index() {
       paddingY={40}
       spacing={24}
       w="full"
-      h="100vh"
+      h={{ base: "auto", xl: "100vh" }}
     >
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{base: '1fr', lg: 'repeat(2, 1fr)'}}
         gap={16}
-        templateRows="repate(2, 1fr)"
+        templateRows={{base: 'repeat(4, 1fr)', lg: 'repeat(2, 1fr)'}}
         flex={1.2}
       >
-        <GridItem colStart={1} colEnd={2}>
+        <GridItem colSpan='auto'>
           <VStack spacing={4}>
             <Text fontWeight="bold" fontSize="6xl">
               2+
@@ -46,7 +46,7 @@ export default function index() {
             </Text>
           </VStack>
         </GridItem>
-        <GridItem colStart={1} colEnd={2} rowStart={2} rowEnd={3}>
+        <GridItem colSpan='auto'>
           <VStack spacing={4}>
             <Text fontWeight="bold" fontSize="6xl">
               13+
@@ -62,7 +62,7 @@ export default function index() {
             </Text>
           </VStack>
         </GridItem>
-        <GridItem colStart={2} colEnd={3}>
+        <GridItem colSpan='auto' rowSpan='auto'>
           <VStack spacing={4}>
             <Text fontWeight="bold" fontSize="6xl">
               3
@@ -78,7 +78,7 @@ export default function index() {
             </Text>
           </VStack>
         </GridItem>
-        <GridItem colStart={2} colEnd={3} rowStart={2} rowEnd={3}>
+        <GridItem colSpan='auto' rowSpan='auto'>
           <VStack spacing={4}>
             <Text fontWeight="bold" fontSize="6xl">
               756+
@@ -107,7 +107,7 @@ export default function index() {
         >
           WHO WE ARE
         </Text>
-        <HStack spacing={12} w="full" h="full" align="start">
+        <Stack direction={{base: 'column', xl: 'row'}} spacing={12} w="full" h="full" align="start">
           <Image
             src={profile}
             alt="Alan Martinez"
@@ -138,7 +138,7 @@ export default function index() {
               MORE ABOUT US
             </Button>
           </VStack>
-        </HStack>
+        </Stack>
       </VStack>
       <HStack>
         <Image />

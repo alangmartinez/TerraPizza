@@ -30,7 +30,7 @@ export default function Header() {
           <Link to="/" smooth={true} >
             <Image src={pizza} alt='Logo' w='90' h='90'/>
           </Link>
-          <HStack spacing="4.5rem" as="nav">
+          <HStack spacing="4.5rem" as="nav" display={{ base: 'none', lg:'flex'}}>
             {pages.map((page) => (
               <Button
                 variant="unstyled"
