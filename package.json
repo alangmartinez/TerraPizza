@@ -29,6 +29,6 @@
     "vite": "^4.0.0"
   },
   "routes": {
-    "/**": "index.html"
+    "/**": "./dist/index.html"
   }
 }
