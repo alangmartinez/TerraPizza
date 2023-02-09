@@ -26,7 +26,7 @@ export default function Footer() {
 
   return (
     <Container maxW="container.xl" as="footer" paddingTop={12}>
-      <VStack spacing={20}>
+      <VStack spacing={8}>
         <HStack
           w="full"
           justify="space-between"

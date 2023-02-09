@@ -1,0 +1,42 @@
+[
+  {
+    "name": "BBQ Chicken",
+    "toppings": ["cheese", "sauce", "chicken", "onions", "bbq sauce"],
+    "price": 12.5,
+    "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
+    "description": "A pizza with chicken, onions and BBQ sauce",
+    "stock": 10
+  },
+  {
+    "name": "Napolitana",
+    "toppings": ["cheese", "sauce", "tomatoes", "basil"],
+    "price": 10.5,
+    "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
+    "description": "A pizza with tomatoes, basil and cheese",
+    "stock": 10
+  },
+  {
+    "name": "Pepperoni",
+    "toppings": ["cheese", "sauce", "pepperoni"],
+    "price": 11.5,
+    "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
+    "description": "A pizza with pepperoni and cheese",
+    "stock": 10
+  },
+  {
+    "name": "Cheese",
+    "toppings": ["cheese", "sauce"],
+    "price": 9.5,
+    "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
+    "description": "A pizza with cheese and sauce",
+    "stock": 10
+  },
+  {
+    "name": "Meet Lovers",
+    "toppings": ["cheese", "sauce", "pepperoni", "ham", "bacon"],
+    "price": 13.5,
+    "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
+    "description": "A pizza with pepperoni, ham and bacon",
+    "stock": 10
+  }
+]

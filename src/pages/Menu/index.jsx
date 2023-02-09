@@ -1,18 +1,17 @@
-import {
-  Box,
-  HStack,
-  Grid,
-  GridItem,
-  VStack,
-  Heading,
-  Stack,
-} from "@chakra-ui/react";
-import Card from "../../components/Card";
+import { Box, Grid, Heading, Stack, VStack, GridItem } from "@chakra-ui/react";
+import { useEffect } from "react";
 import background from "../../assets/images/bgMenu.jpg";
-import pizzas from "../../../pizzas.json";
 import menuBackground from "../../assets/images/menuBackground.jpg";
+import usePizzas from "../../hooks/usePizzas";
+import Pizzas from '../../components/Pizzas';
 
 export default function index() {
+  const { pizzas, getPizzas } = usePizzas();
+
+  useEffect(() => {
+    getPizzas();
+  }, []);
+
   return (
     <Stack
       direction={{ base: "column", lg: "row" }}
@@ -34,23 +33,12 @@ export default function index() {
         backgroundSize="cover"
         bgPosition="center"
         bgRepeat="no-repeat"
+        spacing={12}
       >
         <Heading fontSize="6xl" letterSpacing="wider" fontWeight="bold">
           MENU
         </Heading>
-        <Grid
-          w="full"
-          h="full"
-          templateColumns="repeat(4, 1fr)"
-          templateRows="repeat(4, 1fr)"
-          gap={8}
-        >
-          {pizzas.map((pizza, index) => {
-            <GridItem key={index} colStart={1 + index} colEnd={2 + index}>
-              <Card {...pizza} />
-            </GridItem>;
-          })}
-        </Grid>
+        <Pizzas pizzas={pizzas}/>
       </VStack>
       <Box
         boxShadow="dark-lg"

@@ -1,14 +1,14 @@
-import { Image, Icon } from "@chakra-ui/react";
+import { Icon, Image } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { Link } from "react-scroll";
+import "./App.css";
 import whatsApp from "./assets/images/whatsapp.png";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
-import "./App.css";
-import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -23,9 +23,7 @@ function App() {
   useEffect(() => {
     addEventListener("scroll", handleScroll);
   }, [window.scrollY]);
-
-  console.log(visible);
-
+  
   return (
     <>
       <Home />

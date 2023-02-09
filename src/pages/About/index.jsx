@@ -40,7 +40,7 @@ export default function index() {
             <Text fontWeight="medium" fontSize="2xl">
               Years of experience
             </Text>
-            <Text color="#667085" textAlign="center">
+            <Text color="body2" textAlign="center">
               Established since 2021 in Bahia Blanca, Argentina. We are a team
               of 4 people with a lot of experience in the field of pizza making.
             </Text>
@@ -54,7 +54,7 @@ export default function index() {
             <Text fontWeight="medium" fontSize="2xl">
               Pizza flavors
             </Text>
-            <Text color="#667085" textAlign="center">
+            <Text color="body2" textAlign="center">
               We have all the classic flavors, and we also have traditional and
               new flavors, such as the "Papa Frita" pizza, which is a pizza with
               french fries on top or the "Chorizo" pizza, which is a pizza with
@@ -70,7 +70,7 @@ export default function index() {
             <Text fontWeight="medium" fontSize="2xl">
               Locations
             </Text>
-            <Text color="#667085" textAlign="center">
+            <Text color="body2" textAlign="center">
               We have 2 stores open to the public, in the city of Bahia Blanca.
               <br />
               And one store that is only for delivery and takeout, located in
@@ -86,7 +86,7 @@ export default function index() {
             <Text fontWeight="medium" fontSize="2xl">
               Followers
             </Text>
-            <Text color="#667085" textAlign="center">
+            <Text color="body2" textAlign="center">
               The Terra Pizza Family!
               <br />
               We have more than 756 followers on our social networks. Feel free

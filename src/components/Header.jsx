@@ -1,7 +1,8 @@
-import { Box, Button, Container, Image, HStack } from "@chakra-ui/react";
+import { Box, Button, Container, Image, HStack, Icon } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-scroll";
 import pizza from '../assets/images/favicon.png';
+import { FiShoppingCart } from "react-icons/fi";
 
 export default function Header() {
   const pages = [
@@ -45,6 +46,7 @@ export default function Header() {
               </Button>
             ))}
           </HStack>
+          <Icon flex={.5} children={<FiShoppingCart />} boxSize={10} cursor='pointer'></Icon>
         </HStack>
       </Container>
     </Box>
