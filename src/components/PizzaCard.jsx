@@ -1,16 +1,24 @@
 import {
-  Button, Card, CardBody,
-  CardFooter, HStack,
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  HStack,
   Image,
   Text,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
 
 export default function PizzaCard({ name, description, price, thumbnail }) {
   return (
-    <Card bgColor='whiteAlpha.700' backdropFilter='auto' backdropBlur='md'>
+    <Card
+      h="full"
+      bgColor="whiteAlpha.700"
+      backdropFilter="auto"
+      backdropBlur="md"
+    >
       <Image
-        src={`url('${thumbnail}')`}
+        src={thumbnail}
         alt={description}
         h="full"
         w="full"
@@ -19,14 +27,16 @@ export default function PizzaCard({ name, description, price, thumbnail }) {
         objectFit="cover"
       />
       <CardBody>
-        <VStack justify='space-between' h='full' align='start'>
+        <VStack justify="space-between" h="full" align="start">
           <HStack justify="space-between" w="full">
             <Text fontSize="2xl" fontWeight="semibold">
               {name}
             </Text>
             <Text fontSize="xl">EUR ${price}</Text>
           </HStack>
-          <Text color='text.primary'>{description}</Text>
+          <Text color="text.primary" h="full">
+            {description}
+          </Text>
         </VStack>
       </CardBody>
       <CardFooter>
