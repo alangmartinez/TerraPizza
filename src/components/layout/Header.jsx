@@ -1,11 +1,11 @@
 import { Box, Button, Container, Image, HStack, Icon } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-scroll";
-import pizza from '../assets/images/favicon.png';
+import pizza from '../../assets/images/favicon.png';
 import { FiShoppingCart } from "react-icons/fi";
 
 export default function Header() {
-  const pages = [
+  const menuLinks = [
     {
       name: "Home",
       path: "/",
@@ -32,16 +32,16 @@ export default function Header() {
             <Image src={pizza} alt='Logo' w='90' h='90'/>
           </Link>
           <HStack spacing="4.5rem" as="nav" display={{ base: 'none', lg:'flex'}}>
-            {pages.map((page) => (
+            {menuLinks.map(({name, path}) => (
               <Button
                 variant="unstyled"
                 colorScheme="twitter"
-                key={page.name}
+                key={name}
                 size="lg"
                 fontSize="20px"
               >
-                <Link to={page.path} duration={1600} smooth={true} spy={true}>
-                  {page.name}
+                <Link to={path} duration={1250} smooth={true} spy={true}>
+                  {name}
                 </Link>
               </Button>
             ))}

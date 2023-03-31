@@ -11,12 +11,7 @@ import {
 
 export default function PizzaCard({ name, description, price, thumbnail }) {
   return (
-    <Card
-      h="full"
-      bgColor="whiteAlpha.700"
-      backdropFilter="auto"
-      backdropBlur="md"
-    >
+    <Card maxW="sm" h="full" bgColor="whiteAlpha.900">
       <Image
         src={thumbnail}
         alt={description}
@@ -27,7 +22,7 @@ export default function PizzaCard({ name, description, price, thumbnail }) {
         objectFit="cover"
       />
       <CardBody>
-        <VStack justify="space-between" h="full" align="start">
+        <VStack justify="space-between" h="full" align="start" spacing={4}>
           <HStack justify="space-between" w="full">
             <Text fontSize="2xl" fontWeight="semibold">
               {name}
@@ -40,8 +35,15 @@ export default function PizzaCard({ name, description, price, thumbnail }) {
         </VStack>
       </CardBody>
       <CardFooter>
-        <Button w="full" colorScheme="green" marginTop={6} boxShadow="xl">
-          VIEW MORE
+        <Button
+          w="full"
+          colorScheme="green"
+          textAlign="center"
+          alignContent="center"
+          size="lg"
+          boxShadow="lg"
+        >
+          SEE MORE
         </Button>
       </CardFooter>
     </Card>

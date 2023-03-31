@@ -5,7 +5,8 @@
     "price": 12.5,
     "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
     "description": "A pizza with chicken, onions and BBQ sauce",
-    "stock": 10
+    "stock": 18,
+    "id": 1
   },
   {
     "name": "Napolitana",
@@ -13,7 +14,8 @@
     "price": 10.5,
     "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
     "description": "A pizza with tomatoes, basil and cheese",
-    "stock": 10
+    "stock": 10,
+    "id": 2
   },
   {
     "name": "Pepperoni",
@@ -21,7 +23,8 @@
     "price": 11.5,
     "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
     "description": "A pizza with pepperoni and cheese",
-    "stock": 10
+    "stock": 20,
+    "id": 3
   },
   {
     "name": "Cheese",
@@ -29,7 +32,8 @@
     "price": 9.5,
     "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
     "description": "A pizza with cheese and sauce",
-    "stock": 10
+    "stock": 13,
+    "id": 4
   },
   {
     "name": "Meet Lovers",
@@ -37,6 +41,7 @@
     "price": 13.5,
     "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
     "description": "A pizza with pepperoni, ham and bacon",
-    "stock": 10
+    "stock": 6,
+    "id": 5
   }
 ]

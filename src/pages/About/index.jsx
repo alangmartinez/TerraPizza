@@ -11,15 +11,16 @@ import {
 } from "@chakra-ui/react";
 import profile from "../../assets/profile/profile.jpg";
 import pizza from "../../assets/images/favicon.png";
+import { FiArrowUpRight } from 'react-icons/fi';
 
 export default function index() {
   return (
     <Stack
-      direction={{ base: "column", xl: "row" }}
+      direction={{ lg: "column", xl: "row" }}
       as="section"
       id="about"
-      align={{ base: "center", lg: "center" }}
-      justify="space-around"
+      align={{ lg: "center", xl: "center" }}
+      justify={{ lg: 'center', xl: "space-around"}}
       p={32}
       paddingY={40}
       spacing={24}
@@ -134,7 +135,7 @@ export default function index() {
               I'm a pizza lover, and I decided to open my own pizza store.
               <br />I hope you enjoy our pizzas!
             </Text>
-            <Button w="50%" size="lg" variant="outline">
+            <Button w="50%" size="lg" variant="outline" rightIcon={<FiArrowUpRight/>}>
               MORE ABOUT US
             </Button>
           </VStack>

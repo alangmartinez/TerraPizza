@@ -1,5 +1,5 @@
 import { Box, Stack, Text } from "@chakra-ui/react";
-import HelpForm from "../../components/HelpForm";
+import Form from "./components/ContactForm";
 import background from "../../assets/images/bgContact.jpg";
 
 export default function index() {
@@ -24,7 +24,7 @@ export default function index() {
           We are here to help you!
         </Text>
       </Box>
-      <HelpForm variant='flushed' />
+      <Form variant='flushed' />
     </Stack>
   );
 }

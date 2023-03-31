@@ -2,16 +2,13 @@ import {
   Box,
   Button,
   Container,
-  Heading,
-  VStack,
-  Icon,
+  Heading, Icon, VStack
 } from "@chakra-ui/react";
-import background from "../../assets/images/background.jpg";
-import Header from "../../components/Header";
-import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from "react-icons/bs";
-import { Link } from "react-scroll";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { RiShoppingCart2Line } from "react-icons/ri";
-import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
+import background from "../../assets/images/background.jpg";
+import Header from "../../components/layout/Header";
 
 export default function index() {
 
@@ -27,6 +24,7 @@ export default function index() {
       backgroundSize="cover"
       id="/"
       position="relative"
+      backgroundAttachment='fixed'
     >
       <Header />
       <Container maxW="container.xl" h="full">

@@ -4,7 +4,7 @@ import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 import "./App.css";
 import whatsApp from "./assets/images/whatsapp.png";
-import Footer from "./components/Footer";
+import Footer from "./components/layout/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
