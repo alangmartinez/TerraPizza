@@ -12,57 +12,54 @@ function CartProvider({ children }) {
       return [];
     }
   });
-  const [total, setTotal] = useState(0);
-
+  
   function AddToCart(item) {
     const InCart = cart.some((cartItem) => cartItem.id === item.id);
-
+    
     InCart
-      ? setCart(
-          cart.map((cartItem) => {
-            if (cartItem.id === item.id) {
-              // If the item is already in the cart, increase the quantity
-              return {
-                ...cartItem,
-                quantity: cartItem.quantity + 1,
-              };
-            } else {
-              return cartItem;
-            }
-          })
+    ? setCart(
+      cart.map((cartItem) => {
+        if (cartItem.id === item.id) {
+          // If the item is already in the cart, increase the quantity
+          return {
+            ...cartItem,
+            quantity: cartItem.quantity + 1,
+          };
+        } else {
+          return cartItem;
+        }
+      })
         )
-      : // If not in the cart, add it
+        : // If not in the cart, add it
         setCart([...cart, { ...item, quantity: 1 }]);
-  }
+      }
+      
+      function RemoveFromCart(item) {
+        //Remove from cart
+        setCart(cart.filter((cartItem) => cartItem.id !== item.id));
+      }
+      
+      function ClearCart() {
+        setCart([]);
+      }
+      
+      // Upadte the cart in the localStorage each time that cart undergoes a modification
+      useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        
+        if (cart.length !== 0) {
+          setTotal(
+            cart.reduce((acc, item) => {
+              return acc + item.price * item.quantity;
+            }, 0)
+            );
+          }
+        }, [cart]);
 
-  function RemoveFromCart(item) {
-    //Remove from cart
-    setCart(cart.filter((cartItem) => cartItem.id !== item.id));
-  }
-
-  function ClearCart() {
-    setCart([]);
-  }
-
-  function OrderByLowestPrice () {
-    setCart(cart.sort((a, b) => a.price - b.price));
-  }
-
-  // Upadte the cart in the localStorage each time that cart undergoes a modification
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    if (cart.length !== 0) {
-      setTotal(
-        cart.reduce((acc, item) => {
-          return acc + item.price * item.quantity;
-        }, 0)
-      );
-    }
-  }, [cart]);
-
-  return (
-    <CartContext.Provider
+        const [total, setTotal] = useState(0);
+        
+        return (
+          <CartContext.Provider
       value={{ AddToCart, cart, RemoveFromCart, ClearCart, total }}
     >
       {children}

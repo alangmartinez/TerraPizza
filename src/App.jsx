@@ -1,10 +1,9 @@
-import { Icon, Image } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { Link } from "react-scroll";
 import "./App.css";
 import whatsApp from "./assets/images/whatsapp.png";
 import Footer from "./components/layout/Footer";
+import Header from './components/layout/Header';
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -26,6 +25,7 @@ function App() {
   
   return (
     <>
+      <Header />
       <Home />
       <Menu />
       <About />
@@ -36,7 +36,7 @@ function App() {
         cursor="pointer"
         position="fixed"
         bottom={16}
-        right={16}
+        left={16}
         onClick={() =>
           window.open(
             "https://api.whatsapp.com/send/?phone=5492914467013&text=Hola%2C+quiero+hacer+un+pedido%21&type=phone_number&app_absent=0"
@@ -44,20 +44,6 @@ function App() {
         }
       />
       <Footer />
-      <Link to="/" smooth={true} spy={true} duration={1000}>
-        <Icon
-          as={BsFillArrowUpCircleFill}
-          boxSize={20}
-          display={visible ? "block" : "none"}
-          color="black"
-          position="fixed"
-          top={16}
-          right={16}
-          transition="all 700ms ease-in-out"
-          cursor="pointer"
-          zIndex="99999"
-        />
-      </Link>
     </>
   );
 }

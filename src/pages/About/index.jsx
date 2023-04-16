@@ -16,7 +16,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 export default function index() {
   return (
     <Stack
-      direction={{ lg: "column", xl: "row" }}
+      direction={{ base: "column", xl: "row" }}
       as="section"
       id="about"
       align={{ lg: "center", xl: "center" }}
@@ -35,10 +35,10 @@ export default function index() {
       >
         <GridItem colSpan='auto'>
           <VStack spacing={4}>
-            <Text fontWeight="bold" fontSize="6xl">
+            <Text fontWeight="bold" fontSize="6xl" textAlign='center'>
               2+
             </Text>
-            <Text fontWeight="medium" fontSize="2xl">
+            <Text fontWeight="medium" fontSize="2xl" textAlign='center'>
               Years of experience
             </Text>
             <Text color="body2" textAlign="center">
@@ -49,10 +49,10 @@ export default function index() {
         </GridItem>
         <GridItem colSpan='auto'>
           <VStack spacing={4}>
-            <Text fontWeight="bold" fontSize="6xl">
+            <Text fontWeight="bold" fontSize="6xl" textAlign='center'>
               13+
             </Text>
-            <Text fontWeight="medium" fontSize="2xl">
+            <Text fontWeight="medium" fontSize="2xl" textAlign='center'>
               Pizza flavors
             </Text>
             <Text color="body2" textAlign="center">
@@ -101,7 +101,7 @@ export default function index() {
       <VStack p={16} flex={1} align="start" w="full">
         <Text
           color="#717590"
-          textAlign="start"
+          textAlign={{ base: 'center', xl: 'start' }}
           marginBottom={10}
           fontSize="lg"
           fontWeight="black"
@@ -118,14 +118,14 @@ export default function index() {
             boxShadow="2xl"
             objectFit="cover"
           />
-          <VStack align="start" justify="space-between" h="full">
+          <VStack align={{base: 'center', xl: 'start'}} justify="space-between" h="full">
             <HStack spacing={3} marginBottom="22px">
               <Image maxW="50px" h="50px" src={pizza} alt="pizza icon" />
               <Heading as="h2" color="green.700" fontSize="5xl">
                 Terra Pizza!
               </Heading>
             </HStack>
-            <Text fontWeight="medium" fontSize="2xl">
+            <Text fontWeight="medium" fontSize="2xl" textAlign='center'>
               Hi! I'm Alan Martinez
             </Text>
             <Text fontSize="lg" color="#667085" lineHeight="tall">

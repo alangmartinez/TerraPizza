@@ -16,7 +16,7 @@ export default function Pizzas({pizzas}) {
     {pizzas?.slice(0, 3).map((pizza, i) => {
       return (
         <GridItem key={i}>
-          <PizzaCard {...pizza} />
+          <PizzaCard pizza={pizza} />
         </GridItem>
       );
     })}

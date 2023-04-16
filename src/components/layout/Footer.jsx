@@ -1,36 +1,26 @@
+import { EmailIcon, ExternalLinkIcon, PhoneIcon } from "@chakra-ui/icons";
 import {
   Button,
   Container,
+  Link as ExternalLink,
+  HStack,
+  Heading,
   Stack,
   Text,
   VStack,
-  Link as ExternalLink,
 } from "@chakra-ui/react";
-import { FiArrowUpRight } from "react-icons/fi";
-import { FaFacebookF } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
+import { useState } from "react";
 import { AiOutlineTwitter } from "react-icons/ai";
+import { BsInstagram } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 export default function Footer() {
-  const menuLinks = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "Menu",
-      path: "menu",
-    },
-    {
-      name: "About",
-      path: "about",
-    },
-    {
-      name: "Contact",
-      path: "contact",
-    },
-  ];
+  const [email, setEmail] = useState("");
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
 
   const socialLinks = [
     {
@@ -54,75 +44,58 @@ export default function Footer() {
   ];
 
   return (
-    <Container maxW="container.xl" as="footer" paddingTop={12}>
+    <Container
+      maxW={{ base: "full", xl: "container.xl" }}
+      as="footer"
+      paddingTop={12}
+    >
       <VStack spacing={8}>
         <Stack
-          w="full"
-          direction={{ lg: "column", xl: "row" }}
-          justify={{ lg: "center", xl: "space-between" }}
-          alignItems={{ lg: "center", xl: "start" }}
-          fontWeight="semibold"
+          direction={{ base: "column", xl: "row" }}
+          justify={{ base: "center", xl: "space-between" }}
+          alignItems={{ base: "center", xl: "start" }}
           paddingY={8}
+          spacing={{ base: 20, md: 8 }}
+          w="full"
         >
-          <VStack
-            align={{ lg: "center", xl: "start" }}
-            fontWeight="normal"
-            spacing={0}
-          >
-            {menuLinks.map(({ name, path }) => (
-              <Button
-                key={name}
-                variant="unstyled"
-                fontSize="lg"
-                fontFamily="body"
-                fontWeight="normal"
-              >
-                <Link
-                  fontFamily="body"
-                  to={path}
-                  smooth="true"
-                  spy="true"
-                  duration={1000}
-                >
-                  {name}
-                </Link>
-              </Button>
-            ))}
-          </VStack>
-          <VStack align="start" spacing={0}>
-            <Text
-              fontSize="4xl"
-              letterSpacing={1}
-              fontFamily="heading"
-              marginBottom="22"
-            >
+          <VStack align={{ base: "center", xl: "start" }} spacing={7}>
+            <Heading fontSize="4xl" letterSpacing={1}>
               Contact us
-            </Text>
-            <VStack align="start" fontWeight="normal" color="blackAlpha.800">
-              <Text fontSize="xl">Casanova 1230, Bahia Blanca.</Text>
-              <Text fontSize="xl">
+            </Heading>
+            <VStack
+              align={{ base: "center", xl: "start" }}
+              fontWeight="normal"
+              fontSize="xl"
+              color="blackAlpha.800"
+              spacing={3}
+            >
+              <HStack spacing={3}>
+                <PhoneIcon />
+                <Text>+54 - 2914467013</Text>
+              </HStack>
+              <HStack spacing={3}>
+                <EmailIcon />
                 <Link
                   href="mailto:alannmartinezz@icloud.com"
                   _hover={{ textDecoration: "none" }}
-                >
-                  Email: alannmartinezz@icloud.com
+                  >alannmartinezz@icloud.com
                 </Link>
-              </Text>
+              </HStack>
+                  <Text>Casanova 1230, Bahia Blanca.</Text>
             </VStack>
           </VStack>
           <VStack align="start" spacing={0} margin={0}>
-            <Text
+            <Heading
               alignSelf="start"
               fontSize="4xl"
               letterSpacing={1}
-              fontFamily="heading"
               marginBottom="16px"
             >
               Follow us on
-            </Text>
+            </Heading>
             <VStack
               spacing={3}
-              align={{ lg: "center", xl: "start" }}
+              align={{ base: "center", xl: "start" }}
               padding={0}
               margin={0}
             >
@@ -136,8 +109,9 @@ export default function Footer() {
                   fontFamily="body"
                   fontWeight="medium"
                   color={color}
+                  size='md'
                   leftIcon={icon ? icon : null}
-                  rightIcon={<FiArrowUpRight />}
+                  rightIcon={<ExternalLinkIcon />}
                 >
                   {label}
                 </Button>
