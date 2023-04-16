@@ -18,11 +18,11 @@
     "id": 2
   },
   {
-    "name": "Pepperoni",
+    "name": "Mushrooms",
     "toppings": ["cheese", "sauce", "pepperoni"],
     "price": 11.5,
-    "thumbnail": "https://images.pizzahut.es/Products/Original/ph_pizzapepperonilovers_card-1699.jpg",
-    "description": "A pizza with pepperoni and cheese",
+    "thumbnail": "/images/pizzas/mushrooms.jpg",
+    "description": "Mushrooms, tomatoes and ham",
     "stock": 20,
     "id": 3
   },
@@ -30,7 +30,7 @@
     "name": "Cheese",
     "toppings": ["cheese", "sauce"],
     "price": 9.5,
-    "thumbnail": "https://content.pizzahut.com.au/f/49069/1800x1800/c95594eb81/premium-bbq-chicken-pizza.jpg",
+    "thumbnail": "/images/pizzas/cheese.jpg",
     "description": "A pizza with cheese and sauce",
     "stock": 13,
     "id": 4
@@ -43,5 +43,32 @@
     "description": "A pizza with pepperoni, ham and bacon",
     "stock": 6,
     "id": 5
+  },
+  {
+    "name": "Pepperoni",
+    "toppings": ["cheese", "sauce", "pepperoni"],
+    "price": 11.5,
+    "thumbnail": "/images/pizzas/pepperoni.jpg",
+    "description": "A pizza with pepperoni, black olives and cheese",
+    "stock": 20,
+    "id": 6
+  },
+  {
+    "name": "Margarita",
+    "toppings": ["cheese", "sauce", "oregano", "parmesan cheese"],
+    "price": 9,
+    "thumbnail": "/images/pizzas/margarita.jpg",
+    "description": "A pizza with tamotoes, oregano and parmesan cheese",
+    "stock": 20,
+    "id": 7
+  },
+  {
+    "name": "Vegetarian",
+    "toppings": ["cheese", "sauce", "tomatoes", "mushrooms", "onions", "olives"],
+    "price": 12,
+    "thumbnail": "/images/pizzas/vegetarian.jpg",
+    "description": "A pizza with tomatoes, mushrooms, onions and olives",
+    "stock": 20,
+    "id": 8
   }
 ]

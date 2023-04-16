@@ -39,7 +39,7 @@ export default function Header() {
     const headerHeight = document.getElementById("header").offsetHeight;
 
     scroll > headerHeight
-      ? setBackgroundColor("blackAlpha.700")
+      ? setBackgroundColor("linear(to-b, black, blackAlpha.300)")
       : setBackgroundColor("transparent");
   };
 
@@ -51,19 +51,20 @@ export default function Header() {
     <Box
       w="full"
       top={0}
-      paddingY={3}
+      paddingY={5}
       id="header"
       as="header"
       position="fixed"
       zIndex="sticky"
-      bgColor={backgroundColor}
-      transition="background-color 500ms ease"
-      backdropFilter={backgroundColor === "transparent" ? "none" : "blur(5px)"}
+      bgGradient={backgroundColor}
+
+      transition="all 800ms ease"
+      backdropFilter={backgroundColor === "transparent" ? "none" : "blur(7px)"}
     >
       <Container maxW="container.xl" id="header">
         <HStack maxW="container.xl" justify="space-between">
-          <Link to="/" smooth={true} cursor="pointer">
-            <HStack spacing={3}>
+          <Link to="/" smooth={true}>
+            <HStack spacing={3} cursor="pointer">
               <Image src={pizza} alt="Logo" w="50" h="50" />
               <Heading color="brand.primary" letterSpacing={1} fontSize='3xl' textShadow='dark-lg'>
                 Terra Pizza

@@ -22,6 +22,7 @@ export default function index() {
       backgroundSize="cover"
       bgPosition="center"
       bgRepeat="no-repeat"
+      h='auto'
     >
       <VStack
         maxW="container.xl"
@@ -31,7 +32,7 @@ export default function index() {
         spacing={12}
         id="menu"
       >
-        <Heading fontSize="6xl" letterSpacing="wider" fontWeight="bold">
+        <Heading fontSize="6xl" letterSpacing="wider" fontWeight="bold" textShadow='dark'>
           MENU
         </Heading>
         <HStack justify="space-between" w="full">
@@ -44,9 +45,9 @@ export default function index() {
             />
           </HStack>
           <Select
-            w="sm"
+            w='200px'
             alignSelf="start"
-            variant="filled"
+            variant="flushed"
             fontWeight="medium"
             fontSize={18}
             placeholder="Sort by"

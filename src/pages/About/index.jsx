@@ -114,7 +114,7 @@ export default function index() {
             alt="Alan Martinez"
             w="310px"
             h="310px"
-            borderRadius="full"
+            rounded="full"
             boxShadow="2xl"
             objectFit="cover"
           />

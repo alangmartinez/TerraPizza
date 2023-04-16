@@ -57,6 +57,7 @@ export default function PizzaCard({ pizza }) {
         variant='ghost'
           w="full"
           colorScheme="green"
+          color='brand.primary'
           textAlign="center"
           alignContent="center"
           fontSize="md"
